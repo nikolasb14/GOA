@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    #balance {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    #amountInput {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Bank System</h1>
+
+  <div id="balance">Balance: $<span id="accountBalance">1000</span></div>
+
+  <label for="amountInput">Enter amount:</label>
+  <input type="number" id="amountInput" placeholder="Enter amount">
+
+  <button onclick="deposit()">Deposit</button>
+  <button onclick="withdraw()">Withdraw</button>
+
+  <script src="bank.js"></script>
+
+</body>
+</html>
