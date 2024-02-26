@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function validateForm() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      if (username.length < 5) {
+        alert("Username must be at least 5 characters long.");
+        return false;
+      }
+
+      if (password.length < 8) {
+        alert("Password must be at least 8 characters long.");
+        return false;
+      }
+
+      // If validation passes, add them to an object (you can customize this part)
+      const userObject = {
+        username: username,
+        password: password
+      };
+
+      console.log("User object:", userObject);
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <form onsubmit="return validateForm()">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
